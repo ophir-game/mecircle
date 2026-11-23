@@ -88,11 +88,12 @@ is a strictly worse trust problem.
 
 ## Requirement 3 — Demo Video
 
-- **File:** `demo-video/mecircle-demo.mp4`
+- **File:** `demo-video/mecircle-demo-v2.mp4` (v2, rebuilt 23 Nov 2026 after a
+  full viewer-POV audit of v1; v1 file `mecircle-demo.mp4` kept for reference)
 - **Public link (permanent):**
-  https://github.com/sdwous/mecircle/releases/download/demo-video/mecircle-demo.mp4
-  (GitHub Release `demo-video`, uploaded 23 Nov 2026; 3:35.7, 1920×1080)
-- **Length:** 3:35.7 — within the required 3–5 minutes, English narration
+  https://github.com/sdwous/mecircle/releases/download/demo-video/mecircle-demo-v2.mp4
+  (GitHub Release `demo-video`, uploaded 23 Nov 2026; 3:50.8, 1920×1080)
+- **Length:** 3:50.8 — within the required 3–5 minutes, English narration
   **and** burned-in English subtitles (both official options satisfied).
 - **Contents:** the ROSCA trust problem → MECircle's answer → a tour of the
   live demo reading real chain state → the on-chain run records (completed
