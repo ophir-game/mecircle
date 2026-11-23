@@ -1,0 +1,28 @@
+# === Secrets — NEVER commit ============================================
+# Testnet wallet keys (chmod 600 local files). Losing the repo must never
+# mean losing the keys, and the keys must never travel with the code.
+deployer.json
+test-members.json
+*.key
+*.pem
+*credentials*
+.env
+.env.*
+
+# === Foundry build outputs (regenerate with `forge build`) =============
+contracts/cache/
+contracts/out/
+
+# === Internal working notes (not part of the submission) ===============
+# Registration record contains personal registration data; the concept /
+# endpoint / tech notes are internal process documents (in Indonesian).
+REGISTRATION-DRAFT.md
+CONCEPT.md
+ENDPOINT-HUNT.md
+TECH-NOTES.md
+research/
+deploy/*.log
+
+# === Misc ==============================================================
+.DS_Store
+node_modules/

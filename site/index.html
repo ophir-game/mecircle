@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MECircle — Identity-Gated Rotating Savings Circles on ME Network</title>
+<meta name="description" content="MECircle brings the rotating savings circle (ROSCA / arisan) on-chain: identity-gated membership, on-chain reputation, transparent rounds on ME Network.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <div class="logo">ME</div>
+      <div>
+        <div class="brand-name">MECircle</div>
+        <div class="brand-sub">Rotating savings, on-chain trust</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span id="netBadge" class="badge">ME Network Testnet · Chain 400</span>
+      <button id="connectBtn" class="btn btn-primary">Connect Wallet</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Identity-gated rotating savings circles (ROSCA) on ME Network</h1>
+    <p class="lead">MECircle turns the community savings circle — known across Indonesia as <em>arisan</em> — into a transparent smart-contract system. Members must hold a verified on-chain identity attestation to join, every deposit is recorded in public, and a reputation ledger remembers who pays on time. No treasurer holding the cash, no trust-me bro: the contract holds the pot and pays each round's recipient in turn.</p>
+    <p id="walletNote" class="note"></p>
+    <div id="txStatus" class="tx-status hidden"></div>
+  </section>
+
+  <section class="card">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><strong>Get verified.</strong> An attestor marks your address as identity-verified in the AttestationRegistry. Unverified wallets cannot join a circle.</li>
+      <li><strong>Create or join a circle.</strong> Pick a contribution (e.g. 0.01 MEC), the number of seats, and the round length. The circle starts once its seats fill.</li>
+      <li><strong>Deposit every round.</strong> Each round, every member deposits the same contribution. The full pot goes to one member — round 1's recipient first, then the next, in join order.</li>
+      <li><strong>Build reputation.</strong> On-time deposits and completed circles are written to the ReputationLedger, so a good history follows your address to the next circle.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Live on-chain data</h2>
+      <span id="liveStatus" class="badge badge-live">loading…</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num" id="statCircles">–</div><div class="stat-label">Circles created</div></div>
+      <div class="stat"><div class="stat-num" id="statFactory">Factory</div><div class="stat-label" id="statFactorySub">CircleFactory</div></div>
+      <div class="stat"><div class="stat-num" id="statRegistry">Registry</div><div class="stat-label">AttestationRegistry</div></div>
+    </div>
+    <div id="circles"><p class="muted">Reading the factory…</p></div>
+    <button id="refreshBtn" class="btn btn-ghost">Refresh on-chain data</button>
+  </section>
+
+  <section class="card">
+    <h2>Check an address — identity &amp; reputation</h2>
+    <p class="muted">Look up any address: is it identity-verified, and what does its savings history look like?</p>
+    <div class="row">
+      <input id="checkAddr" type="text" placeholder="0x…" spellcheck="false" autocomplete="off">
+      <button id="checkBtn" class="btn btn-primary">Check</button>
+    </div>
+    <div id="checkResult" class="check-result"></div>
+  </section>
+
+  <section class="card">
+    <h2>Create a new circle</h2>
+    <p class="muted">Creating a circle needs a connected, identity-verified wallet on ME Network (chain 400). The contribution is paid in native MEC each round.</p>
+    <form id="createForm" class="form-grid">
+      <label>Contribution per round (MEC)
+        <input id="cfAmount" type="number" step="0.001" min="0.001" value="0.01" required>
+      </label>
+      <label>Seats (members)
+        <input id="cfSeats" type="number" step="1" min="3" max="20" value="3" required>
+      </label>
+      <label>Round length (days)
+        <input id="cfDays" type="number" step="1" min="1" max="30" value="7" required>
+      </label>
+      <button type="submit" class="btn btn-primary">Create circle</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Contracts</h2>
+    <ul class="contracts" id="contractList"></ul>
+    <p class="muted">Network: ME Network Testnet · Chain ID 400 · Native currency: MEC (18 decimals). All data on this page is read live from these contracts.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>MECircle</strong> — a HARBOR hackathon project for MetaEarth / ME Network. Rotating savings circles with verified identity and portable reputation.</p>
+    <p class="muted">Demo on testnet. MEC on this network has no monetary value.</p>
+  </div>
+</footer>
+
+<script src="ethers.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

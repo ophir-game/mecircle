@@ -1,0 +1,226 @@
+{
+  "txs": {
+    "deployRegistry": "0x5c72f9dbec66eb99a50a2af90fddbf8147c4f9e89aa6a1f8b93d0c46f4472b2c",
+    "deployFactory": "0x92b7cadb95f6dc4b3136e08ed5fe3862656dd7493d7ced3f2b944bbab91fc32c",
+    "fundmember1": "0xb36e27f43933d138a5f1c1d2dfb30d1447bf112cf8ee027019083eb1a8e38e5f",
+    "fundmember2": "0x699052b451545a908db8343d78b345ddb4d077ea65f8ff3277a39cee3591c5aa",
+    "attestdeployer": "0x149138763540aeee72671d9bc363dc3b57172b28e3febd09edbeb28307cd5b7a",
+    "attestmember1": "0x2c9379367d2a1d8fa5eaf6a843d7fb6047be8e735f86ad82426582985f3da93b",
+    "attestmember2": "0x0b590cacaa9c469ba00aecbe75df015a367f3d1a5595a217f796ed9d7356fde2",
+    "createCircle": "0x0261de87951f2e5731f46f471263c4ab5316601c162926b572a430ac2884739f",
+    "joinmember1": "0x51464588907cb10237a25851808dc0422ccbcf61b662c3298af961df78064b4d",
+    "joinmember2": "0xb667c69ce8e6066da4ed56fce16abfc9d7f98e6180fc7d6775c0d24b0a982c87",
+    "joindeployer": "0x9b49fa3f0bb7abd391c1f62448049fe48080df450dce866703a163d556cce976",
+    "r1depositmember1": "0xe5acd918498ac301c470a56a593bab7419ef8ea63d228969f11f7af8f593dd6d",
+    "r1depositmember2": "0xee3d302ae2060eb5da33b80b1a2a10839b3249b42338ca915d8e35fb1b70face",
+    "r1depositdeployer": "0xa3f60cab2eab7da07df8acde75ed050b66f989d6d1283e0ef38b3cbd286c47e2",
+    "r1advanceRound": "0x8237c3940f58ea278aeeea65b76deb4a39939edba7042c4287842d768892a336",
+    "r2depositmember1": "0x1325985f3b062cbccb03cff15b26dc53c3ec04593646042c2b1fdf057038153f",
+    "r2depositmember2": "0x62183d5470ae35a297daba25fee0318355d8dfd4c24f7d655ffebca916eaffa7",
+    "r2depositdeployer": "0x8ef8db510ec56ca6937da07a2ae96f4a30e3d13ef10a6b779c165de252e68f7c",
+    "r2advanceRound": "0x3be085577713794ce250e028752ab4dbeb5d1441cd09240fa7899679536e9537",
+    "r3depositmember1": "0xb2613f1a0d1481258d503cc3673b923fd23845e9eae85ac88173fdc31995f292",
+    "r3depositmember2": "0x2bfa8dd80ba463cfb4743a669d8f6d909a4995bc54f4e3f8233449cd13b13081",
+    "r3depositdeployer": "0xeb8b9e34e3caf803d18c650529b475dfcf2687f88c859d76c2b79f9c36ca7e4e",
+    "r3advanceRound": "0x863bf48ad061e7001567203147a69ab3d9faea90143956da0248154b268328af"
+  },
+  "registry": "0x00Bb9923F4f9a5f163A2735698aa309B7cD7d841",
+  "factory": "0x7d75DEAde0403e5149fE20724EA7EBeE1092D446",
+  "ledger": "0x7E60fc18A89fEE1f3e59D1db2C2d8D0B41bc7204",
+  "circle": "0xDD8F1B8d8Ccaf4C253171768d5077b0E202A6E10",
+  "results": {
+    "checks": [
+      {
+        "name": "r3 RoundAdvanced pot == 0.03 MEC",
+        "ok": true,
+        "detail": "0.03"
+      },
+      {
+        "name": "r3 PotPaid == 0.03 MEC to deployer",
+        "ok": true,
+        "detail": "0.03 -> 0xb9Cd22aD6DC474c7135faE4d88F5E97138a78250"
+      },
+      {
+        "name": "r3 observed delta + gas == pot (0.0299999 + gas)",
+        "ok": false,
+        "detail": "shortfall 10000000000 wei vs gas cost 1205407 wei"
+      },
+      {
+        "name": "circle phase == Completed (2)",
+        "ok": true,
+        "detail": "phase=2"
+      },
+      {
+        "name": "circle balance == 0",
+        "ok": true,
+        "detail": "0.0"
+      },
+      {
+        "name": "factory circleCount == 1",
+        "ok": true,
+        "detail": "1"
+      },
+      {
+        "name": "deployer isVerified",
+        "ok": true,
+        "detail": "true"
+      },
+      {
+        "name": "deployer reputation == 3 on-time / 0 defaulted / 1 completed",
+        "ok": true,
+        "detail": "3/0/1"
+      },
+      {
+        "name": "deployer pendingWithdrawals == 0",
+        "ok": true,
+        "detail": "0"
+      },
+      {
+        "name": "member1 isVerified",
+        "ok": true,
+        "detail": "true"
+      },
+      {
+        "name": "member1 reputation == 3 on-time / 0 defaulted / 1 completed",
+        "ok": true,
+        "detail": "3/0/1"
+      },
+      {
+        "name": "member1 pendingWithdrawals == 0",
+        "ok": true,
+        "detail": "0"
+      },
+      {
+        "name": "member2 isVerified",
+        "ok": true,
+        "detail": "true"
+      },
+      {
+        "name": "member2 reputation == 3 on-time / 0 defaulted / 1 completed",
+        "ok": true,
+        "detail": "3/0/1"
+      },
+      {
+        "name": "member2 pendingWithdrawals == 0",
+        "ok": true,
+        "detail": "0"
+      }
+    ],
+    "r3": {
+      "potFromEvent": "0.03",
+      "gasUsed": "172201",
+      "effectiveGasPriceWei": "7",
+      "gasCostMEC": "0.000000000001205407"
+    },
+    "deployer": {
+      "address": "0xb9Cd22aD6DC474c7135faE4d88F5E97138a78250",
+      "balanceMEC": "1.89999985",
+      "isVerified": true,
+      "roundsOnTime": "3",
+      "roundsDefaulted": "0",
+      "circlesCompleted": "1"
+    },
+    "member1": {
+      "address": "0x2BfeEbFd9Bb69e4EFd3783CC0609A4b66A7cCD54",
+      "balanceMEC": "0.04999996",
+      "isVerified": true,
+      "roundsOnTime": "3",
+      "roundsDefaulted": "0",
+      "circlesCompleted": "1"
+    },
+    "member2": {
+      "address": "0xDBa88Fa8c5ef558121998Bc11B880B62D0e51b82",
+      "balanceMEC": "0.04999996",
+      "isVerified": true,
+      "roundsOnTime": "3",
+      "roundsDefaulted": "0",
+      "circlesCompleted": "1"
+    },
+    "allPassed": false
+  },
+  "r3Note": "deploy.mjs halted at its strict round-3 delta check because the round-3 recipient (deployer) also paid the advanceRound gas; verify.mjs reconciles the delta exactly from the receipt (pot event 0.03 MEC, shortfall == gas cost).",
+  "circle2": {
+    "txs": {
+      "createCircle": "0xe8be5c8940480de855712088601c99133178fcfa1ec5e939cd3ab4d8cbfd111e",
+      "joinMember1": "0x8558f1214dde02ca12776c4d77d5fb469ac27ff48520bc2aad0db57c6b96d642",
+      "joinMember2": "0xcc3b9c24622fb6a9db54bab2675d4bf90ac65daa1c0dad9450097a69eb369fb4",
+      "joinDeployer": "0x27a32b1bcc836b28ab123938c032947bb2860fc24f154b9f34840df64435bd81",
+      "depositMember1": "0x8a51a095142027a6a512547ffba475745f663188e7db92bec2f85b9a735b64a2",
+      "depositMember2": "0x36619b57b7e15c53c8f6efa0940f439049203f6d86b3af66f5be5c1ad00c3d1f",
+      "depositDeployer": "0x7e24e70b833a034b7ef6612fa7e8bb5b859c105ee0efc0e79c54184ca811df24"
+    },
+    "address": "0x1b551f94d16759Fa9aF3Af0648E42108b1fa18f8",
+    "verification": {
+      "checks": [
+        {
+          "name": "phase == 1 (Active)",
+          "ok": true,
+          "detail": "phase=1"
+        },
+        {
+          "name": "memberCount == 3",
+          "ok": true,
+          "detail": "memberCount=3"
+        },
+        {
+          "name": "member order == [member1, member2, deployer]",
+          "ok": true,
+          "detail": "0x2BfeEbFd9Bb69e4EFd3783CC0609A4b66A7cCD54, 0xDBa88Fa8c5ef558121998Bc11B880B62D0e51b82, 0xb9Cd22aD6DC474c7135faE4d88F5E97138a78250"
+        },
+        {
+          "name": "currentRound == 1",
+          "ok": true,
+          "detail": "currentRound=1"
+        },
+        {
+          "name": "depositsThisRound == 3",
+          "ok": true,
+          "detail": "depositsThisRound=3"
+        },
+        {
+          "name": "collectedThisRound == 0.03 MEC",
+          "ok": true,
+          "detail": "0.03 MEC"
+        },
+        {
+          "name": "circle contract balance == 0.03 MEC",
+          "ok": true,
+          "detail": "0.03 MEC"
+        },
+        {
+          "name": "roundDeadline ~ activation + 604800 (remaining within 604800 ± 3600)",
+          "ok": true,
+          "detail": "roundDeadline=1796001993 (2026-11-30T01:26:33.000Z), remaining=604685s"
+        },
+        {
+          "name": "factory.circleCount() == 2",
+          "ok": true,
+          "detail": "circleCount=2"
+        },
+        {
+          "name": "hasDeposited(1, member1) == true",
+          "ok": true,
+          "detail": "true"
+        },
+        {
+          "name": "hasDeposited(1, member2) == true",
+          "ok": true,
+          "detail": "true"
+        },
+        {
+          "name": "hasDeposited(1, deployer) == true",
+          "ok": true,
+          "detail": "true"
+        }
+      ],
+      "balances": {
+        "deployer": "1.88999982",
+        "member1": "0.03999994",
+        "member2": "0.03999994"
+      },
+      "roundDeadline": "1796001993",
+      "verifiedAt": "2026-11-23T01:28:49.529Z"
+    },
+    "depositHashNote": "depositMember1/depositMember2 hashes were recovered from DepositMade event logs (blocks 5466421/5466426) after the first circle2.mjs run was interrupted mid-flight; the deposits themselves were confirmed on-chain by hasDeposited read-back."
+  }
+}
