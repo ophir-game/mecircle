@@ -70,7 +70,8 @@ is a strictly worse trust problem.
 
 ## Requirement 2 — Code Repository
 
-- **Repository:** this repository (link as submitted on the HARBOR form).
+- **Repository:** https://github.com/ophir-game/mecircle (public).
+- **Final commit at submission prep:** `d185aa57ff251dc96d4529d64876f4cede8ca440` (branch `main`; the submission-day final commit is the HEAD of `main` in this repository).
 - **Final commit:** the commit at which this document was finalized for
   submission (see `git log -1`); contract code is frozen under `contracts/`.
 - **Execution instructions:**
